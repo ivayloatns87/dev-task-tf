@@ -4,7 +4,7 @@
 namespace App\Entity\Interfaces;
 
 
-class UserInterface
+interface UserInterface
 {
-
+    public function signContract(int $contractType, array $data);
 }

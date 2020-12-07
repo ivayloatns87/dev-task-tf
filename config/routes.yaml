@@ -1,3 +1,30 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+estate_create:
+    path: /api/v1/estates
+    controller: App\Controller\EstateController:createAction
+    methods: [ POST ]
+estate_show:
+    path: /api/v1/contracts/{id}/estates
+    controller: App\Controller\EstateController:estateAction
+    methods: [GET]
+    requirements:
+        id: '\d+'
+lessor_create:
+    path: /api/v1/lessors
+    controller: App\Controller\LessorController:createAction
+    methods: [POST]
+contract_list:
+    path: /api/v1/contracts
+    controller: App\Controller\ContractController:contractsAction
+    methods: [GET]
+contract_create:
+    path: /api/v1/contracts
+    controller: App\Controller\ContractController:createAction
+    methods: [POST]
+contract_due_rent:
+    path: /api/v1/contracts/dueRent
+    controller: App\Controller\ContractController:dueRentAction
+    methods: [ GET ]
+contract_owned_estates:
+    path: /api/v1/contracts/ownedEstates
+    controller: App\Controller\ContractController:getUserEstates
+    methods: [ GET ]

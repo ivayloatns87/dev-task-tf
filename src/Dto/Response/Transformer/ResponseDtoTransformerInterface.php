@@ -4,7 +4,8 @@
 namespace App\Dto\Response\Transformer;
 
 
-class ResponseDtoTransformerInterface
+interface ResponseDtoTransformerInterface
 {
-
+    public function transformFromObject($object);
+    public function transformFromObjects(iterable $objects): iterable;
 }

@@ -4,7 +4,9 @@
 namespace App\Entity\Interfaces;
 
 
-class ContractInterface
+interface ContractInterface
 {
-
+    public function getContractNumber();
+    public function getContractStartDate();
+    public function getType();
 }

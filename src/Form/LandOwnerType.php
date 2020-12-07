@@ -6,6 +6,7 @@ namespace App\Form;
 
 use App\Entity\Contract;
 use App\Entity\LandOwner;
+use App\Factories\LandOwnerFactory;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -18,6 +19,17 @@ use Symfony\Component\Validator\Constraints\NotNull;
 
 class LandOwnerType extends AbstractType
 {
+    private $landOwnerFactory;
+
+    /**
+     * LandOwnerType constructor.
+     * @param LandOwnerFactory $landOwnerFactory
+     */
+    public function __construct (LandOwnerFactory $landOwnerFactory)
+    {
+        $this->landOwnerFactory = $landOwnerFactory;
+    }
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -49,6 +61,11 @@ class LandOwnerType extends AbstractType
                     ]),
                 ]
             ])
+            ->add('sharePercent', IntegerType::class, [
+                'constraints' => [
+
+                ]
+            ])
         ;
     }
 
@@ -62,14 +79,14 @@ class LandOwnerType extends AbstractType
             'empty_data' => function(FormInterface $form) {
                 $firstName = $form->get('firstName')->getData();
                 $lastName = $form->get('lastName')->getData();
-                $phone = $form->get('lastName')->getData();
+                $phone = $form->get('phone')->getData();
                 $id = $form->get('personalIdentificationNumber')->getData();
 
                 if (!$firstName || !$lastName || !$phone || !$id) {
                     return null;
                 }
 
-                return new LandOwner($firstName, $lastName, $phone, $id);
+                return $this->landOwnerFactory->create($firstName, $lastName, $phone, $id);
             }
         ]);
     }
