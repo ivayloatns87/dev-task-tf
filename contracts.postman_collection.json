@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "fcac1bbc-1f55-4b5b-9834-dcb5a816931f",
+		"name": "contracts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://127.0.0.1:8000/api/v1/contracts",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4774e4c7-2f02-4180-ab2f-aadddfe3b0bb",
+						"exec": [
+							"var current_timestamp = new Date();",
+							"postman.setEnvironmentVariable(\"current_timestamp\", current_timestamp.toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contractNumber\": \"dasdas12\",\n    \"type\": \"2\",\n    \"contractStartDate\" :\"04-21-2020\",\n    \"contractEndDate\" :\"04-22-2020\",\n    \"rentPerAcre\": \"100\", \n    \"price\": \"2000\",\n    \"estates\": [\n        {        \n            \"estateNumber\" : \"111223212211\",\n            \"areaInAcre\": \"240\"           \n        },\n         {        \n            \"estateNumber\" : \"32112211\",\n            \"areaInAcre\": \"240\"           \n        }\n    ] \n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/v1/contracts",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"contracts"
+					]
+				},
+				"description": "add Contract type ownership with multiple estates"
+			},
+			"response": []
+		},
+		{
+			"name": "https://127.0.0.1:8000/api/v1/contracts",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4774e4c7-2f02-4180-ab2f-aadddfe3b0bb",
+						"exec": [
+							"var current_timestamp = new Date();",
+							"postman.setEnvironmentVariable(\"current_timestamp\", current_timestamp.toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contractNumber\": \"dsadqd21321\",\n    \"type\": \"1\",\n    \"contractStartDate\" :\"04-21-2020\",\n    \"contractEndDate\" :\"04-22-2020\",\n    \"rentPerAcre\": \"100\", \n    \"price\": \"2000\",\n    \"estates\": [\n        {        \n            \"estateNumber\" : \"421\",\n            \"areaInAcre\": \"240\",\n            \"landOwners\": [\n                {\n                    \"firstName\" : \"IvayloCe\",\n                    \"lastName\"  : \"Atanassov\",\n                    \"phone\"     : \"3295221\",\n                    \"personalIdentificationNumber\" : \"11\"\n                }\n            ]           \n        },\n        {        \n            \"estateNumber\" : \"3353\",\n            \"areaInAcre\": \"240\",\n            \"landOwners\": [\n                {\n                    \"firstName\" : \"IvayloCe\",\n                    \"lastName\"  : \"Atanassov\",\n                    \"phone\"     : \"3295221\",\n                    \"personalIdentificationNumber\" : \"1235\"\n                }\n            ]           \n        }\n    ] \n}"
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/v1/contracts",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"contracts"
+					]
+				},
+				"description": "add contract type lease"
+			},
+			"response": []
+		},
+		{
+			"name": "https://127.0.0.1:8000/api/v1/contracts/dueRent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/v1/contracts/dueRent",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"contracts",
+						"dueRent"
+					]
+				},
+				"description": "get dueRent"
+			},
+			"response": []
+		},
+		{
+			"name": "https://127.0.0.1:8000/api/v1/contracts/ownedEstates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/v1/contracts/ownedEstates",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"contracts",
+						"ownedEstates"
+					]
+				},
+				"description": "get user contract for owned land"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
