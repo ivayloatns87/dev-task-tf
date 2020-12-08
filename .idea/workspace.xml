@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c68f88ba-875d-494b-842e-de04bdcfa8d6" name="Default Changelist" comment="" />
+    <list default="true" id="c68f88ba-875d-494b-842e-de04bdcfa8d6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ContractController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContractController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Contract.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Contract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ContractLease.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ContractLease.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ContractOwnership.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ContractOwnership.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Estate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Estate.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +141,8 @@
       <workItem from="1607172410175" duration="28479000" />
       <workItem from="1607242518206" duration="22606000" />
       <workItem from="1607269981688" duration="6300000" />
-      <workItem from="1607324372164" duration="40439000" />
+      <workItem from="1607324372164" duration="41981000" />
+      <workItem from="1607407121473" duration="487000" />
     </task>
     <servers />
   </component>

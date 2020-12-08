@@ -47,12 +47,11 @@ class ContractController extends AbstractApiController
             $contract->addEstate($estate);
         }
 
-
         $em = $this->getDoctrine()->getManager();
         $em->persist($contract);
         $em->flush();
 
-        return $this->respond($contract->getContractNumber(), Response::HTTP_CREATED);
+        return $this->respond($contract->getId(), Response::HTTP_CREATED);
     }
 
     public function dueRentAction(Request $request): Response

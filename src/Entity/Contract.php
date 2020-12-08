@@ -24,7 +24,7 @@ abstract class Contract implements ContractInterface
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\Column(type="string", length=100)

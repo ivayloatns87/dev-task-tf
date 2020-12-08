@@ -17,7 +17,7 @@ class ContractOwnership extends Contract implements OwnershipInterface
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\Column(type="decimal", precision=10, scale=2)
